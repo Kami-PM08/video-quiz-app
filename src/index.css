@@ -1,0 +1,78 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #213547;
+  background-color: #fff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+video {
+  background-color: #222;
+  width: 100%;
+}
+
+.grid-center {
+  display: grid;
+  place-items: center;
+}
+
+.modal-box {
+  width: 25vw;
+  height: 25vh;
+  background: #fff;
+  border-radius: 2em;
+  padding: 1em;
+}
+
+.video-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 7px 7px 10px #a6a6a6, -7px -7px 10px #ffffff !important;
+}
+
+.video-controls,
+.video-controls div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.video-card .MuiCardActions-root {
+  align-self: flex-end;
+}
+
+.recording {
+  animation: recording 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  animation-iteration-count: infinite;
+  margin-inline: 1em;
+}
+
+@keyframes recording {
+  from {
+    opacity: 1;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
